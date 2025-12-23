@@ -1,0 +1,255 @@
+body {
+    font-family: 'Times New Roman', serif;
+   background-image: url("our_images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* PINNED */
+
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.65); /* adjust transparency */
+    z-index: -1;
+}
+
+/* Header */
+header {
+    padding: 40px 10px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+header p {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+header h2 {
+    color: white;
+    margin-top: 40px;
+}
+
+.our_photos  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.our_photos img {
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.our_photos img:hover {
+    transform: scale(1.05);
+}
+
+.two-photos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;   /* space between photos */
+    margin: 30px 0;
+}
+
+.two-photos img {
+    width: 45%;
+    max-width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.3);
+}
+
+.two-photos img:hover {
+    transform: scale(1.05);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    
+    body {
+        background-attachment: scroll;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .message {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .photos img {
+        width: 90%;
+    }
+
+    .site-header {
+        min-height: 220px;
+        padding: 40px 15px;
+    }
+
+    .site-footer {
+        padding: 30px 15px;
+    }
+
+    .site-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .love-separator {
+        padding: 30px 15px;
+    }
+
+    .love-separator p {
+        font-size: 1.05rem;
+    }
+}
+
+.site-header {
+    background-image: url("our_images/header.jpg");
+    background-size: cover;       /* fills the header */
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 300px;
+    padding: 60px 20px;
+
+    color: white;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.site-footer {
+    background-image: url("our_images/header.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.site-header::before,
+.site-footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.site-header,
+.site-footer {
+    position: relative;
+    z-index: 1;
+}
+
+.site-header * ,
+.site-footer * {
+    position: relative;
+    z-index: 2;
+}
+
+section, header, footer {
+    position: relative;
+    z-index: 1;
+}
+
+.love-separator {
+    background-color: #ffffff;
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.love-separator p {
+    color: #e91e63;          /* reddish-pink */
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.love-separator::after {
+    content: "♥ ♥ ♥";
+    display: block;
+    margin-top: 15px;
+    color: #f48fb1;
+    font-size: 1.2rem;
+}
+
+.two-videos {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.two-videos video {
+    width: 45%;
+    max-width: 320px;
+}
+
+.image-message {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 40px auto;
+    border-radius: 10px;
+    overflow: hidden; /* keeps overlay inside image */
+}
+
+/* Image */
+.image-message img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Transparent Text Box */
+.message-box {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: rgba(255, 255, 255, 0.75); /* transparent white */
+    padding: 20px 25px;
+    border-radius: 15px;
+
+    color: #ef1ba5;
+    font-size: 0.75rem;
+    text-align: center;
+    max-width: 80%;
+}
+
+/* Text styling */
+.message-box p {
+    margin: 0;
+    line-height: 1.5;
+    font-weight: 500;
+}
